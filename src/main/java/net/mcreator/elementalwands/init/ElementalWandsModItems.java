@@ -11,8 +11,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
 
 import net.mcreator.elementalwands.item.WaterWandItem;
+import net.mcreator.elementalwands.item.WaterShardItem;
 import net.mcreator.elementalwands.item.ForestWandItem;
+import net.mcreator.elementalwands.item.ForestShardItem;
 import net.mcreator.elementalwands.item.FireWandItem;
+import net.mcreator.elementalwands.item.FireShardItem;
+import net.mcreator.elementalwands.item.AirWandItem;
+import net.mcreator.elementalwands.item.AirShardItem;
 import net.mcreator.elementalwands.ElementalWandsMod;
 
 public class ElementalWandsModItems {
@@ -20,4 +25,9 @@ public class ElementalWandsModItems {
 	public static final RegistryObject<Item> FOREST_WAND = REGISTRY.register("forest_wand", () -> new ForestWandItem());
 	public static final RegistryObject<Item> FIRE_WAND = REGISTRY.register("fire_wand", () -> new FireWandItem());
 	public static final RegistryObject<Item> WATER_WAND = REGISTRY.register("water_wand", () -> new WaterWandItem());
+	public static final RegistryObject<Item> AIR_WAND = REGISTRY.register("air_wand", () -> new AirWandItem());
+	public static final RegistryObject<Item> FOREST_SHARD = REGISTRY.register("forest_shard", () -> new ForestShardItem());
+	public static final RegistryObject<Item> FIRE_SHARD = REGISTRY.register("fire_shard", () -> new FireShardItem());
+	public static final RegistryObject<Item> WATER_SHARD = REGISTRY.register("water_shard", () -> new WaterShardItem());
+	public static final RegistryObject<Item> AIR_SHARD = REGISTRY.register("air_shard", () -> new AirShardItem());
 }

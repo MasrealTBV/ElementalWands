@@ -1,5 +1,5 @@
 {
-  "parent": "elemental_wands:custom/wand2",
+  "parent": "elemental_wands:custom/firewand",
   "textures": {
     "0": "elemental_wands:blocks/firewand",
     "particle": "elemental_wands:items/firewand"

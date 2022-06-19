@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.elementalwands.entity.WaterWandEntity;
 import net.mcreator.elementalwands.entity.ForestWandEntity;
 import net.mcreator.elementalwands.entity.FireWandEntity;
+import net.mcreator.elementalwands.entity.AirWandEntity;
 import net.mcreator.elementalwands.ElementalWandsMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -32,6 +33,9 @@ public class ElementalWandsModEntities {
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<WaterWandEntity>> WATER_WAND = register("projectile_water_wand",
 			EntityType.Builder.<WaterWandEntity>of(WaterWandEntity::new, MobCategory.MISC).setCustomClientFactory(WaterWandEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AirWandEntity>> AIR_WAND = register("projectile_air_wand",
+			EntityType.Builder.<AirWandEntity>of(AirWandEntity::new, MobCategory.MISC).setCustomClientFactory(AirWandEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

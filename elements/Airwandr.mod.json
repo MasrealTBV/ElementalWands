@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.SNOW"
       },
       {
         "value": ""
@@ -31,7 +31,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Blocks.SNOW"
       },
       {
         "value": ""
@@ -40,7 +40,7 @@
     "recipeReturnStack": {
       "value": "CUSTOM:ForestWand"
     },
-    "name": "forestwandr",
+    "name": "airwandr",
     "namespace": "mod"
   }
 }

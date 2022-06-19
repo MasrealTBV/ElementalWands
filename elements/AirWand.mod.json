@@ -3,9 +3,9 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 1,
-    "texture": "firewand",
-    "customModelName": "firewand:default",
-    "name": "Fire Wand",
+    "texture": "airwand",
+    "customModelName": "waterwand:default",
+    "name": "Air Wand",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
@@ -22,22 +22,22 @@
     "hasGlow": false,
     "animation": "bow",
     "enableMeleeDamage": true,
-    "damageVsEntity": 0.5,
-    "bulletPower": 1.0,
-    "bulletDamage": 2.0,
-    "bulletKnockback": 2,
-    "bulletParticles": true,
+    "damageVsEntity": 1.0,
+    "bulletPower": 2.0,
+    "bulletDamage": 1.0,
+    "bulletKnockback": 6,
+    "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "Items.EMERALD"
+      "value": "Items.SNOWBALL"
     },
     "bulletModel": "Modelproj",
-    "customBulletModelTexture": "shards.png",
+    "customBulletModelTexture": "gfk.png",
     "onBulletHitsPlayer": {
-      "name": "FireWandProjectileHitsPlayer"
+      "name": "AirWandProjectileHitsPlayer"
     },
     "onBulletHitsEntity": {
-      "name": "FireWandProjectileHitsLivingEntity"
+      "name": "AirWandProjectileHitsLivingEntity"
     }
   }
 }

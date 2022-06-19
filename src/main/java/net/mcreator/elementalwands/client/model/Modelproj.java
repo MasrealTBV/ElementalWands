@@ -32,9 +32,9 @@ public class Modelproj<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition bone = partdefinition.addOrReplaceChild("bone",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-1.3333F, -1.6667F, -6.3333F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(0, 6)
-						.addBox(-1.3333F, -0.6667F, -0.3333F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 10)
-						.addBox(-0.3333F, -0.6667F, 3.6667F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(0, 0).addBox(6.6667F, -8.6667F, -6.3333F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(0, 6)
+						.addBox(6.6667F, -7.6667F, -0.3333F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 10)
+						.addBox(7.6667F, -7.6667F, 3.6667F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(-7.6667F, 17.6667F, 8.3333F, 0.0F, 1.5708F, 1.5708F));
 		return LayerDefinition.create(meshdefinition, 16, 16);
 	}

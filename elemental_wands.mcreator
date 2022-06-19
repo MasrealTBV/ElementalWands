@@ -146,6 +146,122 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "waterwandr"
+    },
+    {
+      "name": "Firewandr",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firewandr"
+    },
+    {
+      "name": "Airwandr",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "airwandr"
+    },
+    {
+      "name": "AirWand",
+      "type": "rangeditem",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_wand"
+    },
+    {
+      "name": "AirWandProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_wand_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirWandProjectileHitsPlayer",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_wand_projectile_hits_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShardRightclicked",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shard_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForestShard",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_shard"
+    },
+    {
+      "name": "FireShard",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_shard"
+    },
+    {
+      "name": "WaterShard",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_shard"
+    },
+    {
+      "name": "AirShard",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_shard"
     }
   ],
   "variable_elements": [],
@@ -153,18 +269,18 @@
   "language_map": {
     "en_us": {
       "item.elemental_wands.fire_wand": "Fire Wand",
+      "item.elemental_wands.water_shard": "Forest Shard",
+      "item.elemental_wands.air_shard": "Forest Shard",
+      "item.elemental_wands.fire_shard": "Fire Shard",
+      "item.elemental_wands.air_wand": "Air Wand",
+      "item.elemental_wands.forest_shard": "Forest Shard",
       "item.elemental_wands.forest_wand": "Forest Wand",
       "item.elemental_wands.water_wand": "Water Wand"
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": [
-      {
-        "name": "e",
-        "children": []
-      }
-    ]
+    "children": []
   },
   "workspaceSettings": {
     "modid": "elemental_wands",

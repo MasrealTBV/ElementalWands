@@ -22,7 +22,7 @@
         "value": ""
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Items.BLAZE_ROD"
       },
       {
         "value": ""
@@ -31,16 +31,16 @@
         "value": ""
       },
       {
-        "value": "Blocks.LOG"
+        "value": "Items.BLAZE_ROD"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:ForestWand"
+      "value": "CUSTOM:FireWand"
     },
-    "name": "forestwandr",
+    "name": "firewandr",
     "namespace": "mod"
   }
 }

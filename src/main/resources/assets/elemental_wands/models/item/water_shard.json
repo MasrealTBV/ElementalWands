@@ -1,0 +1,7 @@
+{
+  "parent": "elemental_wands:custom/shardwater",
+  "textures": {
+    "0": "elemental_wands:blocks/watershard",
+    "particle": "elemental_wands:items/watershard"
+  }
+}
