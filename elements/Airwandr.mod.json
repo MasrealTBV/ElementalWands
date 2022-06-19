@@ -13,7 +13,7 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:AirShard"
       },
       {
         "value": ""
@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:ForestWand"
+      "value": "CUSTOM:AirWand"
     },
     "name": "airwandr",
     "namespace": "mod"

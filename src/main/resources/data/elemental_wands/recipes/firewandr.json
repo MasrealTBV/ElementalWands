@@ -2,13 +2,17 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
-    "1"
+    "1",
+    "2"
   ],
   "key": {
     "0": {
-      "item": "minecraft:blaze_rod"
+      "item": "elemental_wands:fire_shard"
     },
     "1": {
+      "item": "minecraft:blaze_rod"
+    },
+    "2": {
       "item": "minecraft:blaze_rod"
     }
   },

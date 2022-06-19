@@ -2,18 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "0",
-    "1"
+    "1",
+    "2"
   ],
   "key": {
     "0": {
-      "item": "minecraft:snow_block"
+      "item": "elemental_wands:air_shard"
     },
     "1": {
+      "item": "minecraft:snow_block"
+    },
+    "2": {
       "item": "minecraft:snow_block"
     }
   },
   "result": {
-    "item": "elemental_wands:forest_wand",
+    "item": "elemental_wands:air_wand",
     "count": 1
   }
 }
