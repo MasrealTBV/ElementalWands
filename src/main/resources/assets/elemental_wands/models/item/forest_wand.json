@@ -1,0 +1,7 @@
+{
+  "parent": "elemental_wands:custom/forestwand",
+  "textures": {
+    "0": "elemental_wands:blocks/wand",
+    "particle": "elemental_wands:items/wand"
+  }
+}

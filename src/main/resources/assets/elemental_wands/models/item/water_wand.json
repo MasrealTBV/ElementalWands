@@ -1,0 +1,7 @@
+{
+  "parent": "elemental_wands:custom/waterwand",
+  "textures": {
+    "0": "elemental_wands:blocks/waterwand",
+    "particle": "elemental_wands:items/waterwand"
+  }
+}

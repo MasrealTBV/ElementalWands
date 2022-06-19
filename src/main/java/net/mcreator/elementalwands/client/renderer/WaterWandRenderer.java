@@ -1,0 +1,43 @@
+package net.mcreator.elementalwands.client.renderer;
+
+import net.minecraft.util.Mth;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.MultiBufferSource;
+
+import net.mcreator.elementalwands.entity.WaterWandEntity;
+import net.mcreator.elementalwands.client.model.Modelproj;
+
+import com.mojang.math.Vector3f;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class WaterWandRenderer extends EntityRenderer<WaterWandEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("elemental_wands:textures/arge.png");
+	private final Modelproj model;
+
+	public WaterWandRenderer(EntityRendererProvider.Context context) {
+		super(context);
+		model = new Modelproj(context.bakeLayer(Modelproj.LAYER_LOCATION));
+	}
+
+	@Override
+	public void render(WaterWandEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn,
+			int packedLightIn) {
+		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
+		poseStack.pushPose();
+		poseStack.mulPose(Vector3f.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
+		poseStack.mulPose(Vector3f.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 0.0625f);
+		poseStack.popPose();
+		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(WaterWandEntity entity) {
+		return texture;
+	}
+}

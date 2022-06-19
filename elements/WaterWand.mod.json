@@ -1,0 +1,43 @@
+{
+  "_fv": 28,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 1,
+    "texture": "waterwand",
+    "customModelName": "waterwand:default",
+    "name": "Water Wand",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 800,
+    "actionSound": {
+      "value": "block.beacon.activate"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 1.0,
+    "bulletPower": 2.0,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 3,
+    "bulletParticles": true,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Items.DYE#18"
+    },
+    "bulletModel": "Modelproj",
+    "customBulletModelTexture": "arge.png",
+    "onBulletHitsPlayer": {
+      "name": "WaterWandProjectileHitsPlayer"
+    },
+    "onBulletHitsEntity": {
+      "name": "WaterWandProjectileHitsLivingEntity"
+    }
+  }
+}
