@@ -31,6 +31,7 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -43,6 +44,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.elementalwands.procedures.WaterFairyRightClickedOnEntityProcedure;
+import net.mcreator.elementalwands.init.ElementalWandsModItems;
 import net.mcreator.elementalwands.init.ElementalWandsModEntities;
 
 import java.util.Set;
@@ -71,6 +73,7 @@ public class WaterFairyEntity extends Monster {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ElementalWandsModItems.WATER_SHARD.get()));
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 

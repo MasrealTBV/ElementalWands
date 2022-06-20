@@ -7,31 +7,31 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
+        "value": "Items.WATER_BUCKET"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.STRING"
+      },
+      {
         "value": "CUSTOM:WaterShard"
       },
       {
-        "value": ""
+        "value": "Items.LEATHER"
       },
       {
         "value": ""
       },
       {
-        "value": "Blocks.STONE#0"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.STONE#0"
+        "value": "Blocks.STONE"
       },
       {
         "value": ""

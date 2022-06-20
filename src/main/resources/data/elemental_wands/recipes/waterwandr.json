@@ -1,21 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "0",
-    "1",
-    "2"
-  ],
-  "key": {
-    "0": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
       "item": "elemental_wands:water_shard"
     },
-    "1": {
-      "item": "minecraft:stone"
+    {
+      "item": "minecraft:leather"
     },
-    "2": {
-      "item": "minecraft:stone"
+    {
+      "tag": "forge:stone"
     }
-  },
+  ],
   "result": {
     "item": "elemental_wands:water_wand",
     "count": 1

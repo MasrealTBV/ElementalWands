@@ -1,21 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "0",
-    "1",
-    "2"
-  ],
-  "key": {
-    "0": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_leaves"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
       "item": "elemental_wands:forest_shard"
     },
-    "1": {
-      "item": "minecraft:oak_log"
+    {
+      "item": "minecraft:leather"
     },
-    "2": {
+    {
       "item": "minecraft:oak_log"
     }
-  },
+  ],
   "result": {
     "item": "elemental_wands:forest_wand",
     "count": 1

@@ -23,6 +23,7 @@ import net.mcreator.elementalwands.entity.ForestFairyEntity;
 import net.mcreator.elementalwands.entity.FireWandEntity;
 import net.mcreator.elementalwands.entity.FireFairyEntity;
 import net.mcreator.elementalwands.entity.AirWandEntity;
+import net.mcreator.elementalwands.entity.AirFairyEntity;
 import net.mcreator.elementalwands.ElementalWandsMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -53,6 +54,11 @@ public class ElementalWandsModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ForestFairyEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AirFairyEntity>> AIR_FAIRY = register("air_fairy",
+			EntityType.Builder.<AirFairyEntity>of(AirFairyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AirFairyEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -64,6 +70,7 @@ public class ElementalWandsModEntities {
 			FireFairyEntity.init();
 			WaterFairyEntity.init();
 			ForestFairyEntity.init();
+			AirFairyEntity.init();
 		});
 	}
 
@@ -72,5 +79,6 @@ public class ElementalWandsModEntities {
 		event.put(FIRE_FAIRY.get(), FireFairyEntity.createAttributes().build());
 		event.put(WATER_FAIRY.get(), WaterFairyEntity.createAttributes().build());
 		event.put(FOREST_FAIRY.get(), ForestFairyEntity.createAttributes().build());
+		event.put(AIR_FAIRY.get(), AirFairyEntity.createAttributes().build());
 	}
 }

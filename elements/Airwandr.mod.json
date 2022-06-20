@@ -7,25 +7,25 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
+        "value": "Blocks.CALCITE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.STRING"
+      },
+      {
         "value": "CUSTOM:AirShard"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.SNOW"
-      },
-      {
-        "value": ""
+        "value": "Items.LEATHER"
       },
       {
         "value": ""

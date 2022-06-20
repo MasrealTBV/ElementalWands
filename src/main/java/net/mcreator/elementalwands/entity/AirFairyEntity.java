@@ -43,7 +43,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.elementalwands.procedures.ForestFairyRightClickedOnEntityProcedure;
+import net.mcreator.elementalwands.procedures.AirFAiryRightClickedOnEntityProcedure;
 import net.mcreator.elementalwands.init.ElementalWandsModItems;
 import net.mcreator.elementalwands.init.ElementalWandsModEntities;
 
@@ -51,7 +51,7 @@ import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class ForestFairyEntity extends Monster {
+public class AirFairyEntity extends Monster {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("old_growth_birch_forest"),
 			new ResourceLocation("bamboo_jungle"), new ResourceLocation("forest"), new ResourceLocation("dark_forest"),
 			new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"),
@@ -61,18 +61,18 @@ public class ForestFairyEntity extends Monster {
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
 			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(ElementalWandsModEntities.FOREST_FAIRY.get(), 5, 1, 1));
+					.add(new MobSpawnSettings.SpawnerData(ElementalWandsModEntities.AIR_FAIRY.get(), 5, 1, 1));
 	}
 
-	public ForestFairyEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(ElementalWandsModEntities.FOREST_FAIRY.get(), world);
+	public AirFairyEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(ElementalWandsModEntities.AIR_FAIRY.get(), world);
 	}
 
-	public ForestFairyEntity(EntityType<ForestFairyEntity> type, Level world) {
+	public AirFairyEntity(EntityType<AirFairyEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ElementalWandsModItems.FOREST_SHARD.get()));
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ElementalWandsModItems.AIR_SHARD.get()));
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -92,10 +92,10 @@ public class ForestFairyEntity extends Monster {
 		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
-				Random random = ForestFairyEntity.this.getRandom();
-				double dir_x = ForestFairyEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_y = ForestFairyEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
-				double dir_z = ForestFairyEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
+				Random random = AirFairyEntity.this.getRandom();
+				double dir_x = AirFairyEntity.this.getX() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_y = AirFairyEntity.this.getY() + ((random.nextFloat() * 2 - 1) * 16);
+				double dir_z = AirFairyEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
@@ -125,7 +125,7 @@ public class ForestFairyEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.CACTUS)
+		if (source.isExplosion())
 			return false;
 		return super.hurt(source, amount);
 	}
@@ -141,7 +141,7 @@ public class ForestFairyEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level;
 
-		ForestFairyRightClickedOnEntityProcedure.execute(world, entity);
+		AirFAiryRightClickedOnEntityProcedure.execute(world, entity);
 		return retval;
 	}
 
@@ -169,13 +169,13 @@ public class ForestFairyEntity extends Monster {
 			double dx = (random.nextFloat() - 0.5D) * 0.5D;
 			double dy = (random.nextFloat() - 0.5D) * 0.5D;
 			double dz = (random.nextFloat() - 0.5D) * 0.5D;
-			world.addParticle(ParticleTypes.SPORE_BLOSSOM_AIR, x0, y0, z0, dx, dy, dz);
+			world.addParticle(ParticleTypes.CLOUD, x0, y0, z0, dx, dy, dz);
 		}
 	}
 
 	public static void init() {
-		SpawnPlacements.register(ElementalWandsModEntities.FOREST_FAIRY.get(), SpawnPlacements.Type.ON_GROUND,
-				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos,
+		SpawnPlacements.register(ElementalWandsModEntities.AIR_FAIRY.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
 	}
 

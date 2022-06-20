@@ -16,6 +16,7 @@ import net.mcreator.elementalwands.client.renderer.ForestFairyRenderer;
 import net.mcreator.elementalwands.client.renderer.FireWandRenderer;
 import net.mcreator.elementalwands.client.renderer.FireFairyRenderer;
 import net.mcreator.elementalwands.client.renderer.AirWandRenderer;
+import net.mcreator.elementalwands.client.renderer.AirFairyRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ElementalWandsModEntityRenderers {
@@ -28,5 +29,6 @@ public class ElementalWandsModEntityRenderers {
 		event.registerEntityRenderer(ElementalWandsModEntities.FIRE_FAIRY.get(), FireFairyRenderer::new);
 		event.registerEntityRenderer(ElementalWandsModEntities.WATER_FAIRY.get(), WaterFairyRenderer::new);
 		event.registerEntityRenderer(ElementalWandsModEntities.FOREST_FAIRY.get(), ForestFairyRenderer::new);
+		event.registerEntityRenderer(ElementalWandsModEntities.AIR_FAIRY.get(), AirFairyRenderer::new);
 	}
 }

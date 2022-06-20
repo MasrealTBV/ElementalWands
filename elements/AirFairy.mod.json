@@ -5,19 +5,19 @@
     "mobName": "Fire Fairy",
     "mobLabel": "",
     "mobModelName": "Modelcustom_model",
-    "mobModelTexture": "fairyforest.png",
-    "mobModelGlowTexture": "fairyforest.png",
+    "mobModelTexture": "fairyair.png",
+    "mobModelGlowTexture": "fairyair.png",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16711936,
+      "value": -5187871,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16738048,
+      "value": -8013897,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -27,7 +27,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:ForestShard"
+      "value": "CUSTOM:AirShard"
     },
     "equipmentOffHand": {
       "value": ""
@@ -66,12 +66,12 @@
     "immuneToFire": false,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
-    "immuneToCactus": true,
+    "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
-    "immuneToExplosion": false,
+    "immuneToExplosion": true,
     "immuneToTrident": false,
     "immuneToAnvil": false,
     "immuneToWither": false,
@@ -93,13 +93,13 @@
     },
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "SPORE_BLOSSOM_AIR"
+      "value": "CLOUD"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "onRightClickedOn": {
-      "name": "ForestFairyRightClickedOnEntity"
+      "name": "AirFAiryRightClickedOnEntity"
     },
     "hasAI": true,
     "aiBase": "(none)",

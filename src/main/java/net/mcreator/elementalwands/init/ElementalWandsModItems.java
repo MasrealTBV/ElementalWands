@@ -40,4 +40,7 @@ public class ElementalWandsModItems {
 	public static final RegistryObject<Item> FOREST_FAIRY = REGISTRY.register("forest_fairy_spawn_egg",
 			() -> new ForgeSpawnEggItem(ElementalWandsModEntities.FOREST_FAIRY, -16711936, -16738048,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> AIR_FAIRY = REGISTRY.register("air_fairy_spawn_egg",
+			() -> new ForgeSpawnEggItem(ElementalWandsModEntities.AIR_FAIRY, -5187871, -8013897,
+					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

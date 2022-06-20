@@ -1,21 +1,22 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "0",
-    "1",
-    "2"
-  ],
-  "key": {
-    "0": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
       "item": "elemental_wands:air_shard"
     },
-    "1": {
-      "item": "minecraft:snow_block"
+    {
+      "item": "minecraft:leather"
     },
-    "2": {
+    {
       "item": "minecraft:snow_block"
     }
-  },
+  ],
   "result": {
     "item": "elemental_wands:air_wand",
     "count": 1

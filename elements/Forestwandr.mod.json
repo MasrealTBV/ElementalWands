@@ -7,25 +7,25 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": ""
       },
       {
+        "value": "Blocks.LEAVES"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.STRING"
+      },
+      {
         "value": "CUSTOM:ForestShard"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": "Blocks.LOG"
-      },
-      {
-        "value": ""
+        "value": "Items.LEATHER"
       },
       {
         "value": ""
