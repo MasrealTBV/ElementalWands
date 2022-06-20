@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.elementalwands.client.renderer.WaterWandRenderer;
 import net.mcreator.elementalwands.client.renderer.WaterFairyRenderer;
 import net.mcreator.elementalwands.client.renderer.ForestWandRenderer;
+import net.mcreator.elementalwands.client.renderer.ForestFairyRenderer;
 import net.mcreator.elementalwands.client.renderer.FireWandRenderer;
 import net.mcreator.elementalwands.client.renderer.FireFairyRenderer;
 import net.mcreator.elementalwands.client.renderer.AirWandRenderer;
@@ -26,5 +27,6 @@ public class ElementalWandsModEntityRenderers {
 		event.registerEntityRenderer(ElementalWandsModEntities.AIR_WAND.get(), AirWandRenderer::new);
 		event.registerEntityRenderer(ElementalWandsModEntities.FIRE_FAIRY.get(), FireFairyRenderer::new);
 		event.registerEntityRenderer(ElementalWandsModEntities.WATER_FAIRY.get(), WaterFairyRenderer::new);
+		event.registerEntityRenderer(ElementalWandsModEntities.FOREST_FAIRY.get(), ForestFairyRenderer::new);
 	}
 }

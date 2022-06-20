@@ -318,6 +318,34 @@
           }
         ]
       }
+    },
+    {
+      "name": "ForestFairy",
+      "type": "livingentity",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_fairy"
+    },
+    {
+      "name": "ForestFairyRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_fairy_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -330,10 +358,12 @@
       "entity.elemental_wands.water_fairy": "Fire Fairy",
       "item.elemental_wands.forest_shard": "Forest Shard",
       "item.elemental_wands.water_wand": "Water Wand",
+      "entity.elemental_wands.forest_fairy": "Fire Fairy",
       "item.elemental_wands.fire_wand": "Fire Wand",
       "item.elemental_wands.water_shard": "Forest Shard",
       "item.elemental_wands.air_shard": "Forest Shard",
       "item.elemental_wands.fire_fairy_spawn_egg": "Fire Fairy Spawn Egg",
+      "item.elemental_wands.forest_fairy_spawn_egg": "Fire Fairy Spawn Egg",
       "item.elemental_wands.water_fairy_spawn_egg": "Fire Fairy Spawn Egg",
       "item.elemental_wands.forest_wand": "Forest Wand"
     }
