@@ -36,6 +36,9 @@
     },
     "bulletModel": "Modelproj",
     "customBulletModelTexture": "shards.png",
+    "onBulletHitsBlock": {
+      "name": "FireWandProjectileHitsBlock"
+    },
     "onBulletHitsPlayer": {
       "name": "FireWandProjectileHitsPlayer"
     },

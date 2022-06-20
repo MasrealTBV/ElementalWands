@@ -10,6 +10,6 @@ public class AirWandProjectileHitsLivingEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 60, 1));
+			_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 1));
 	}
 }

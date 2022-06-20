@@ -11,6 +11,6 @@ public class WaterWandProjectileHitsLivingEntityProcedure {
 			return;
 		entity.clearFire();
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 2));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2));
 	}
 }

@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -22,6 +23,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.elementalwands.procedures.FireWandProjectileHitsPlayerProcedure;
 import net.mcreator.elementalwands.procedures.FireWandProjectileHitsLivingEntityProcedure;
+import net.mcreator.elementalwands.procedures.FireWandProjectileHitsBlockProcedure;
 import net.mcreator.elementalwands.init.ElementalWandsModEntities;
 
 import java.util.Random;
@@ -76,6 +78,13 @@ public class FireWandEntity extends AbstractArrow implements ItemSupplier {
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
 		FireWandProjectileHitsLivingEntityProcedure.execute(entityHitResult.getEntity());
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		FireWandProjectileHitsBlockProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(),
+				blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

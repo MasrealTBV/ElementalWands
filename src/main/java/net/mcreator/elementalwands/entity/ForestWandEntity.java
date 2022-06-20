@@ -83,9 +83,8 @@ public class ForestWandEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		ForestWandProjectileHitsBlockProcedure.execute(
-
-		);
+		ForestWandProjectileHitsBlockProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(),
+				blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

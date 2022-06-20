@@ -104,7 +104,24 @@
       "locked_code": false,
       "registry_name": "forest_wand_projectile_hits_block",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -451,6 +468,34 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FireWandProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_wand_projectile_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
