@@ -2,11 +2,11 @@
   "_fv": 28,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Fire Fairy",
+    "mobName": "Forest Fairy",
     "mobLabel": "",
     "mobModelName": "Modelcustom_model",
     "mobModelTexture": "fairyforest.png",
-    "mobModelGlowTexture": "fairyforest.png",
+    "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -27,7 +27,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:ForestShard"
+      "value": ""
     },
     "equipmentOffHand": {
       "value": ""
@@ -44,7 +44,7 @@
     "equipmentBoots": {
       "value": ""
     },
-    "mobBehaviourType": "Mob",
+    "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 3,
     "attackKnockback": 0.0,
@@ -77,7 +77,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:ForestShard"
     },
     "livingSound": {
       "value": ""

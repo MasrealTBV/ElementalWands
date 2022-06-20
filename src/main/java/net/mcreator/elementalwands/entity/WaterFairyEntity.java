@@ -18,7 +18,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
@@ -28,10 +27,10 @@ import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -51,7 +50,7 @@ import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class WaterFairyEntity extends Monster {
+public class WaterFairyEntity extends PathfinderMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("warm_ocean"),
 			new ResourceLocation("frozen_river"), new ResourceLocation("deep_lukewarm_ocean"), new ResourceLocation("cold_ocean"),
 			new ResourceLocation("deep_ocean"), new ResourceLocation("swamp"), new ResourceLocation("deep_frozen_ocean"),
@@ -73,7 +72,6 @@ public class WaterFairyEntity extends Monster {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ElementalWandsModItems.WATER_SHARD.get()));
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -90,7 +88,8 @@ public class WaterFairyEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.AMETHYST_SHARD), false));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.8, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				Random random = WaterFairyEntity.this.getRandom();
@@ -100,13 +99,17 @@ public class WaterFairyEntity extends Monster {
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
 		});
-		this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.of(Items.AMETHYST_SHARD), false));
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(ElementalWandsModItems.WATER_SHARD.get()));
 	}
 
 	@Override

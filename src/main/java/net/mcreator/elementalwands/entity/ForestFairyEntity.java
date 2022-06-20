@@ -18,7 +18,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
@@ -28,10 +27,10 @@ import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -51,7 +50,7 @@ import java.util.Set;
 import java.util.Random;
 
 @Mod.EventBusSubscriber
-public class ForestFairyEntity extends Monster {
+public class ForestFairyEntity extends PathfinderMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("old_growth_birch_forest"),
 			new ResourceLocation("bamboo_jungle"), new ResourceLocation("forest"), new ResourceLocation("dark_forest"),
 			new ResourceLocation("sparse_jungle"), new ResourceLocation("birch_forest"), new ResourceLocation("flower_forest"),
@@ -72,7 +71,6 @@ public class ForestFairyEntity extends Monster {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ElementalWandsModItems.FOREST_SHARD.get()));
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -106,6 +104,11 @@ public class ForestFairyEntity extends Monster {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(ElementalWandsModItems.FOREST_SHARD.get()));
 	}
 
 	@Override
