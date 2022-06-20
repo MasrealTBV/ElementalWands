@@ -262,6 +262,34 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_shard"
+    },
+    {
+      "name": "FireFairy",
+      "type": "livingentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_fairy"
+    },
+    {
+      "name": "FireFairyRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_fairy_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -271,8 +299,10 @@
       "item.elemental_wands.fire_wand": "Fire Wand",
       "item.elemental_wands.water_shard": "Forest Shard",
       "item.elemental_wands.air_shard": "Forest Shard",
+      "item.elemental_wands.fire_fairy_spawn_egg": "Fire Fairy Spawn Egg",
       "item.elemental_wands.fire_shard": "Fire Shard",
       "item.elemental_wands.air_wand": "Air Wand",
+      "entity.elemental_wands.fire_fairy": "Fire Fairy",
       "item.elemental_wands.forest_shard": "Forest Shard",
       "item.elemental_wands.forest_wand": "Forest Wand",
       "item.elemental_wands.water_wand": "Water Wand"

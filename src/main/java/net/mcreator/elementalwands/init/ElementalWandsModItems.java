@@ -7,8 +7,10 @@ package net.mcreator.elementalwands.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
 
 import net.mcreator.elementalwands.item.WaterWandItem;
 import net.mcreator.elementalwands.item.WaterShardItem;
@@ -30,4 +32,6 @@ public class ElementalWandsModItems {
 	public static final RegistryObject<Item> FIRE_SHARD = REGISTRY.register("fire_shard", () -> new FireShardItem());
 	public static final RegistryObject<Item> WATER_SHARD = REGISTRY.register("water_shard", () -> new WaterShardItem());
 	public static final RegistryObject<Item> AIR_SHARD = REGISTRY.register("air_shard", () -> new AirShardItem());
+	public static final RegistryObject<Item> FIRE_FAIRY = REGISTRY.register("fire_fairy_spawn_egg",
+			() -> new ForgeSpawnEggItem(ElementalWandsModEntities.FIRE_FAIRY, -13312, -26368, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }

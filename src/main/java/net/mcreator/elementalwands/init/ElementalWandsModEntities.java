@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.elementalwands.entity.WaterWandEntity;
 import net.mcreator.elementalwands.entity.ForestWandEntity;
 import net.mcreator.elementalwands.entity.FireWandEntity;
+import net.mcreator.elementalwands.entity.FireFairyEntity;
 import net.mcreator.elementalwands.entity.AirWandEntity;
 import net.mcreator.elementalwands.ElementalWandsMod;
 
@@ -37,6 +38,9 @@ public class ElementalWandsModEntities {
 	public static final RegistryObject<EntityType<AirWandEntity>> AIR_WAND = register("projectile_air_wand",
 			EntityType.Builder.<AirWandEntity>of(AirWandEntity::new, MobCategory.MISC).setCustomClientFactory(AirWandEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FireFairyEntity>> FIRE_FAIRY = register("fire_fairy",
+			EntityType.Builder.<FireFairyEntity>of(FireFairyEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireFairyEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -45,10 +49,12 @@ public class ElementalWandsModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			FireFairyEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(FIRE_FAIRY.get(), FireFairyEntity.createAttributes().build());
 	}
 }
