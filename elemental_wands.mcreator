@@ -290,22 +290,52 @@
           }
         ]
       }
+    },
+    {
+      "name": "WaterFairy",
+      "type": "livingentity",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_fairy"
+    },
+    {
+      "name": "WaterFairyRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_fairy_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.elemental_wands.fire_shard": "Fire Shard",
+      "item.elemental_wands.air_wand": "Air Wand",
+      "entity.elemental_wands.fire_fairy": "Fire Fairy",
+      "entity.elemental_wands.water_fairy": "Fire Fairy",
+      "item.elemental_wands.forest_shard": "Forest Shard",
+      "item.elemental_wands.water_wand": "Water Wand",
       "item.elemental_wands.fire_wand": "Fire Wand",
       "item.elemental_wands.water_shard": "Forest Shard",
       "item.elemental_wands.air_shard": "Forest Shard",
       "item.elemental_wands.fire_fairy_spawn_egg": "Fire Fairy Spawn Egg",
-      "item.elemental_wands.fire_shard": "Fire Shard",
-      "item.elemental_wands.air_wand": "Air Wand",
-      "entity.elemental_wands.fire_fairy": "Fire Fairy",
-      "item.elemental_wands.forest_shard": "Forest Shard",
-      "item.elemental_wands.forest_wand": "Forest Wand",
-      "item.elemental_wands.water_wand": "Water Wand"
+      "item.elemental_wands.water_fairy_spawn_egg": "Fire Fairy Spawn Egg",
+      "item.elemental_wands.forest_wand": "Forest Wand"
     }
   },
   "foldersRoot": {
@@ -316,9 +346,8 @@
     "modid": "elemental_wands",
     "modName": "Elemental Wands",
     "version": "1.0.0",
-    "author": "Администратор, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "author": "Masreal, MCreator",
+    "license": "MIT License",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -326,6 +355,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.elementalwands",
     "lockBaseModFiles": false
   },

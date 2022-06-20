@@ -1,12 +1,14 @@
 {
+  "item.elemental_wands.fire_shard": "Fire Shard",
+  "item.elemental_wands.air_wand": "Air Wand",
+  "entity.elemental_wands.fire_fairy": "Fire Fairy",
+  "entity.elemental_wands.water_fairy": "Fire Fairy",
+  "item.elemental_wands.forest_shard": "Forest Shard",
+  "item.elemental_wands.water_wand": "Water Wand",
   "item.elemental_wands.fire_wand": "Fire Wand",
   "item.elemental_wands.water_shard": "Forest Shard",
   "item.elemental_wands.air_shard": "Forest Shard",
   "item.elemental_wands.fire_fairy_spawn_egg": "Fire Fairy Spawn Egg",
-  "item.elemental_wands.fire_shard": "Fire Shard",
-  "item.elemental_wands.air_wand": "Air Wand",
-  "entity.elemental_wands.fire_fairy": "Fire Fairy",
-  "item.elemental_wands.forest_shard": "Forest Shard",
-  "item.elemental_wands.forest_wand": "Forest Wand",
-  "item.elemental_wands.water_wand": "Water Wand"
+  "item.elemental_wands.water_fairy_spawn_egg": "Fire Fairy Spawn Egg",
+  "item.elemental_wands.forest_wand": "Forest Wand"
 }
