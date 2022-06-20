@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.elementalwands.procedures.WaterWandRangedItemUsedProcedure;
 import net.mcreator.elementalwands.entity.WaterWandEntity;
 
 import com.google.common.collect.Multimap;
@@ -68,6 +69,8 @@ public class WaterWandItem extends Item {
 				WaterWandEntity entityarrow = WaterWandEntity.shoot(world, entity, world.getRandom(), 2f, 2, 3);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				WaterWandRangedItemUsedProcedure.execute(entity, itemstack);
 			}
 		}
 	}

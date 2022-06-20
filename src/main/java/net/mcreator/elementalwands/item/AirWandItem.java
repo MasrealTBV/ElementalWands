@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.elementalwands.procedures.AirWandRangedItemUsedProcedure;
 import net.mcreator.elementalwands.entity.AirWandEntity;
 
 import com.google.common.collect.Multimap;
@@ -68,6 +69,8 @@ public class AirWandItem extends Item {
 				AirWandEntity entityarrow = AirWandEntity.shoot(world, entity, world.getRandom(), 2f, 1, 6);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				AirWandRangedItemUsedProcedure.execute(entity, itemstack);
 			}
 		}
 	}

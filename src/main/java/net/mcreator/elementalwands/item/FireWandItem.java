@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.elementalwands.procedures.FireWandRangedItemUsedProcedure;
 import net.mcreator.elementalwands.entity.FireWandEntity;
 
 import com.google.common.collect.Multimap;
@@ -68,6 +69,8 @@ public class FireWandItem extends Item {
 				FireWandEntity entityarrow = FireWandEntity.shoot(world, entity, world.getRandom(), 1f, 2, 2);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				FireWandRangedItemUsedProcedure.execute(entity, itemstack);
 			}
 		}
 	}

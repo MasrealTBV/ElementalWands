@@ -23,6 +23,9 @@
     "animation": "bow",
     "enableMeleeDamage": true,
     "damageVsEntity": 0.5,
+    "onRangedItemUsed": {
+      "name": "ForestWandRangedItemUsed"
+    },
     "bulletPower": 2.0,
     "bulletDamage": 5.0,
     "bulletKnockback": 3,

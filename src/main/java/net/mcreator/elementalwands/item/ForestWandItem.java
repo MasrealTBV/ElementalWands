@@ -18,6 +18,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.elementalwands.procedures.ForestWandRangedItemUsedProcedure;
 import net.mcreator.elementalwands.entity.ForestWandEntity;
 
 import com.google.common.collect.Multimap;
@@ -68,6 +69,8 @@ public class ForestWandItem extends Item {
 				ForestWandEntity entityarrow = ForestWandEntity.shoot(world, entity, world.getRandom(), 2f, 5, 3);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
+
+				ForestWandRangedItemUsedProcedure.execute(entity, itemstack);
 			}
 		}
 	}
